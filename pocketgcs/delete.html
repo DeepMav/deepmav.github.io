@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PocketGCS 데이터 및 계정 삭제</title>
+<meta name="robots" content="index,follow">
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body { margin:0; padding:2rem 1rem 4rem; font-family:-apple-system,"Segoe UI",Roboto,"Noto Sans KR",sans-serif; line-height:1.7; color:#1a1f2b; background:#fff; -webkit-text-size-adjust:100%; }
+  .wrap { max-width:760px; margin:0 auto; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; }
+  h2 { font-size:1.15rem; margin:2rem 0 .5rem; padding-top:.4rem; border-top:1px solid #e6e8ee; }
+  p,li { font-size:.98rem; }
+  ol,ul { padding-left:1.3rem; }
+  .muted { color:#5a6472; font-size:.9rem; }
+  table { width:100%; border-collapse:collapse; margin:.6rem 0; font-size:.9rem; }
+  th,td { border:1px solid #dfe3ea; padding:.5rem .6rem; text-align:left; vertical-align:top; }
+  th { background:#f5f7fa; }
+  .box { background:#f5f7fa; border:1px solid #e0e4ec; border-radius:8px; padding:.8rem 1rem; margin:1rem 0; }
+  code { background:#eef1f6; padding:.1rem .35rem; border-radius:4px; font-size:.88em; }
+  a { color:#1a56db; }
+  @media (prefers-color-scheme: dark) {
+    body { color:#dfe4ee; background:#0f141c; }
+    h2 { border-top-color:#232b38; } .muted { color:#97a1b2; }
+    th { background:#1a2230; } th,td { border-color:#263040; }
+    .box { background:#151d29; border-color:#253044; } code { background:#1b2431; } a { color:#7aa2ff; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>PocketGCS — 데이터 및 계정 삭제</h1>
+  <p class="muted">앱: PocketGCS (<code>com.deepmav.pocketgcs</code>) · 개발자: DeepMav · 문의: <a href="mailto:harvey7926@gmail.com">harvey7926@gmail.com</a></p>
+
+  <p>PocketGCS 이용자는 언제든지 계정과 관련 데이터의 삭제를 요청할 수 있습니다. 아래 방법 중 하나를 이용하세요.</p>
+
+  <h2>1. 계정 및 전체 데이터 삭제 (앱에서 직접)</h2>
+  <ol>
+    <li>PocketGCS 앱 실행 → <strong>설정 → 계정</strong></li>
+    <li><strong>계정 삭제</strong> 선택 → 확인</li>
+    <li>계정과 아래 서버 저장 데이터가 삭제됩니다.</li>
+  </ol>
+
+  <h2>2. 일부 데이터만 삭제</h2>
+  <ul>
+    <li><strong>클라우드 녹화</strong>: 앱에서 해당 녹화를 개별 삭제할 수 있습니다(계정 삭제 불필요).</li>
+    <li><strong>기기 저장 정보</strong>(비행 승인 신원정보·비행 로그): 앱 내에서 직접 삭제하거나 앱을 제거하면 함께 삭제됩니다.</li>
+  </ul>
+
+  <h2>3. 이메일로 삭제 요청</h2>
+  <p>위 방법을 사용할 수 없거나 특정 데이터의 삭제를 원하시면 <a href="mailto:harvey7926@gmail.com">harvey7926@gmail.com</a> 으로
+  가입 이메일과 함께 요청해 주세요. 확인 후 처리합니다.</p>
+
+  <h2>삭제 · 보관되는 데이터</h2>
+  <table>
+    <thead><tr><th>데이터</th><th>처리</th><th>보관</th></tr></thead>
+    <tbody>
+      <tr><td>계정 정보(이메일·식별자·표시 이름)</td><td>삭제</td><td>요청 시 삭제</td></tr>
+      <tr><td>Pro 구독 자격 상태</td><td>삭제</td><td>요청 시 삭제 *</td></tr>
+      <tr><td>클라우드 녹화(영상)</td><td>삭제</td><td>요청 시 삭제</td></tr>
+      <tr><td>공유 링크·세션 데이터</td><td>삭제/폐기</td><td>요청 시 삭제</td></tr>
+      <tr><td>기체 텔레메트리(위치)</td><td>실시간 처리, 장기 저장 안 함</td><td>보관하지 않음</td></tr>
+      <tr><td>비행 승인 신원정보·비행 로그</td><td>기기 전용(서버 미전송)</td><td>앱 내 삭제 또는 앱 제거 시 삭제</td></tr>
+    </tbody>
+  </table>
+  <p class="muted">* 결제·구독의 취소는 Google Play(정기 결제)에서 별도로 진행하며, 결제 관련 기록은 관련 법령이 요구하는 범위에서 보관될 수 있습니다.</p>
+
+  <p class="muted" style="margin-top:1.5rem;">관련: <a href="https://deepmav.github.io/pocketgcs/privacy.html">개인정보처리방침</a></p>
+</div>
+</body>
+</html>
