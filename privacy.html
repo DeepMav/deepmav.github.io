@@ -14,66 +14,192 @@
        color:var(--ink);background:var(--bg);line-height:1.7}
   .wrap{max-width:760px;margin:0 auto;padding:40px 20px 70px}
   a{color:var(--accent)}
-  h1{font-size:26px} h2{font-size:19px;margin-top:30px}
+  h1{font-size:26px} h2{font-size:19px;margin-top:30px} h3{font-size:16px;margin:24px 0 6px}
   .updated{color:var(--muted);font-size:14px}
   .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:8px 26px 26px;margin-top:18px}
   hr{border:none;border-top:1px solid var(--line);margin:34px 0}
   .muted{color:var(--muted)}
   .back{display:inline-block;margin-bottom:10px;text-decoration:none}
+  table{width:100%;border-collapse:collapse;margin:10px 0;font-size:14px}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:rgba(37,99,235,.07);font-weight:600}
+  .tablewrap{overflow-x:auto}
 </style>
 </head>
 <body>
 <div class="wrap">
   <a class="back" href="./">&larr; FlyReady</a>
   <h1>개인정보 처리방침 / Privacy Policy</h1>
-  <p class="updated">최종 업데이트: 2026-07-10</p>
+  <p class="updated">최종 업데이트: 2026-09-22</p>
 
   <div class="card">
     <h2>한국어</h2>
-    <p>FlyReady(“본 앱”)은 이용자의 개인정보를 소중히 여깁니다. 본 앱이 수집·이용하는 정보는 다음과 같습니다.</p>
-    <p><b>1. 위치 정보</b><br>본 앱은 현재 위치의 기상·비행 적합도를 계산하기 위해 기기의 대략적/정확한 위치를
-      사용합니다. 위치는 기상 조회에 일시적으로만 사용되며 본 앱 서버에 저장되지 않습니다.</p>
-    <p><b>2. 광고 (Google AdMob)</b><br>본 앱은 Google AdMob을 통해 광고를 게재합니다. AdMob은 광고
-      게재·측정·부정클릭 방지를 위해 <b>광고 식별자(Advertising ID)</b> 등 기기 정보를 수집할 수 있습니다.
-      EEA/영국 이용자에게는 광고 동의(UMP) 양식을 표시합니다.
-      Google의 데이터 처리: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com</a></p>
-    <p><b>3. 기상 데이터 제공자</b><br>WeatherAPI.com, MET Norway, NOAA SWPC로 좌표를 전송해 예보/지자기
-      데이터를 조회합니다. 이 제공자들은 본 앱을 대신해 요청을 처리하는 서비스 제공자입니다.</p>
-    <p><b>4. 저장 정보</b><br>기체 프로필·설정은 <b>기기 내부 저장소에만</b> 저장되며 외부로 전송되지 않습니다.</p>
-    <p><b>5. 아동</b><br>본 앱은 만 13세 미만 아동을 대상으로 하지 않습니다.</p>
-    <p><b>6. 데이터 삭제 및 보관</b><br>FlyReady는 개인정보를 자체 서버에 저장하지 않습니다.
-      위치 정보는 기상 조회 시 일시적으로만 사용되어 즉시 폐기되며 보관하지 않습니다.
-      광고 식별자는 기기의 <b>[설정 &gt; 개인정보 &gt; 광고]</b>에서 재설정하거나 삭제할 수 있습니다.
-      앱을 삭제하면 기기에 저장된 모든 설정·기체 프로필이 함께 제거됩니다.
-      보유 중인 데이터의 삭제를 요청하거나 문의하려면
-      <a href="mailto:harvey7926@gmail.com">harvey7926@gmail.com</a> 으로 연락해 주세요.
-      요청은 접수 후 30일 이내에 처리합니다.</p>
-    <p class="muted"><b>문의:</b> <a href="mailto:harvey7926@gmail.com">harvey7926@gmail.com</a></p>
+    <p>FlyReady(“본 앱”)는 드론 조종자에게 현재 위치의 기상과 비행 적합도를 계산해 보여주는 앱입니다.
+      본 앱은 <b>회원가입이 없고, 자체 서버에 개인정보를 저장하지 않습니다.</b></p>
+
+    <h3>1. 처리하는 정보·목적·법적 근거·보유 기간</h3>
+    <div class="tablewrap">
+    <table>
+      <tr><th>항목</th><th>목적</th><th>법적 근거(GDPR 제6조)</th><th>보유 기간</th></tr>
+      <tr>
+        <td>위치정보(위도·경도)</td>
+        <td>현재 위치의 기상·지자기 조회 및 비행 적합도 계산</td>
+        <td>이용자의 <b>동의</b>(제6조 제1항 (a)) — 기기의 위치 권한으로 받습니다</td>
+        <td>조회 요청에만 일시 사용하며 <b>저장하지 않습니다</b></td>
+      </tr>
+      <tr>
+        <td>광고 식별자(Advertising ID), 기기·광고 상호작용 정보</td>
+        <td>광고 게재·측정·부정클릭 방지</td>
+        <td>EEA·영국: <b>동의</b>(UMP 동의 양식). 그 밖의 지역: 해당 지역 법령에 따름</td>
+        <td>Google의 보관 정책을 따릅니다</td>
+      </tr>
+      <tr>
+        <td>기체 프로필·앱 설정·알림 설정</td>
+        <td>앱 기능 제공</td>
+        <td>계약 이행(제6조 제1항 (b))</td>
+        <td>기기 안에만 저장. 앱 삭제 시 함께 삭제</td>
+      </tr>
+    </table>
+    </div>
+    <p class="muted">본 앱은 이름·이메일·전화번호·연락처·사진 등 어떤 계정 정보도 수집하지 않습니다.</p>
+
+    <h3>2. 기기 안에만 저장되어 전송되지 않는 정보</h3>
+    <p>기체 프로필(중량·배터리·프로펠러 등), 계산 결과, 앱 설정, 알림 설정은 <b>기기 내부 저장소에만</b>
+      저장되며 외부로 전송되지 않습니다. 앱을 삭제하면 모두 지워집니다.</p>
+
+    <h3>3. 제3자 제공 및 국외 이전</h3>
+    <p>본 앱은 아래 제3자에게 정보를 전송합니다. 기상 제공자들은 <b>각자의 방침에 따라 요청 로그(접속 IP·요청
+      좌표 등)를 자체적으로 처리하는 독립된 처리자</b>이며, 본 앱의 수탁자가 아닙니다.</p>
+    <div class="tablewrap">
+    <table>
+      <tr><th>받는 곳</th><th>전송 정보</th><th>목적</th><th>국가</th><th>이전 근거</th></tr>
+      <tr><td>Google (AdMob)</td><td>광고 식별자, 기기 정보, IP</td><td>광고 게재·측정</td><td>미국 등</td>
+          <td>이용자 동의 + Google의 표준계약조항(SCC)</td></tr>
+      <tr><td>WeatherAPI.com</td><td>조회 좌표, 접속 IP</td><td>기상 예보 조회</td><td>영국</td>
+          <td>영국은 EU 적정성 결정 대상국</td></tr>
+      <tr><td>MET Norway (노르웨이 기상청)</td><td>조회 좌표, 접속 IP</td><td>4~7일 확장 예보 조회</td><td>노르웨이</td>
+          <td>노르웨이는 EEA 회원국</td></tr>
+      <tr><td>NOAA SWPC (미국 해양대기청)</td><td>접속 IP</td><td>지자기(Kp) 지수 조회</td><td>미국</td>
+          <td>공개 데이터 조회, 좌표 미전송</td></tr>
+    </table>
+    </div>
+    <p class="muted">이 밖에 개인정보를 판매하거나 광고 목적으로 제3자와 공유하지 않습니다.</p>
+
+    <h3>4. EU·영국 이용자 안내 및 이용자의 권리</h3>
+    <p>EEA·영국 이용자에게는 앱 최초 실행 시 <b>광고 동의(UMP) 양식</b>을 표시하며, 동의하지 않으면
+      맞춤 광고가 게재되지 않습니다. 이용자는 언제든 다음 권리를 행사할 수 있습니다.</p>
+    <ul>
+      <li><b>열람·정정·삭제·처리정지·이동</b> 요청 — 본 앱은 서버에 개인정보를 보관하지 않으므로, 기기
+        설정에서 위치 권한을 해제하거나 앱을 삭제하면 즉시 중단·삭제됩니다.</li>
+      <li><b>동의 철회</b> — 기기 설정에서 위치 권한을 해제하고, 광고 동의는 앱 내 광고 동의 양식에서
+        다시 설정할 수 있습니다.</li>
+      <li><b>광고 식별자 재설정·삭제</b> — 안드로이드 [설정 &gt; 개인정보 &gt; 광고],
+        iOS [설정 &gt; 개인정보 보호 및 보안 &gt; 추적].</li>
+      <li><b>감독기구에 민원 제기</b> — 대한민국은 개인정보보호위원회(privacy.go.kr, 국번없이 182),
+        EEA·영국은 거주 국가의 개인정보 감독기구.</li>
+    </ul>
+    <p>문의·요청은 <a href="mailto:harvey7926@gmail.com">harvey7926@gmail.com</a> 으로 보내 주시면
+      접수 후 30일 이내에 처리합니다.</p>
+
+    <h3>5. 만 13세 미만 아동</h3>
+    <p>본 앱은 만 13세 미만(대한민국은 만 14세 미만) 아동을 대상으로 하지 않으며, 아동의 개인정보를
+      의도적으로 수집하지 않습니다. 아동의 정보가 수집된 사실을 알게 되면 즉시 삭제합니다.</p>
+
+    <h3>6. 안전성 확보 조치</h3>
+    <p>모든 외부 통신은 HTTPS로 암호화됩니다. 본 앱은 자체 서버를 운영하지 않으므로 보관 중인 개인정보가
+      없습니다.</p>
+
+    <h3>7. 개인정보 보호책임자 및 고지의 의무</h3>
+    <p>개인정보 보호책임자: 김호중 (<a href="mailto:harvey7926@gmail.com">harvey7926@gmail.com</a>)<br>
+      본 방침이 변경되면 이 페이지에 변경 내용과 시행일을 게시합니다.</p>
+    <p class="muted">본 앱은 참고용 도구이며 비행 허가를 대체하지 않습니다. 비행 전 공식 기상정보와
+      NOTAM을 확인하시고, 각국 항공 법규를 준수하시기 바랍니다.</p>
   </div>
 
   <div class="card">
     <h2>English</h2>
-    <p>FlyReady (“the App”) respects your privacy. This is what the App collects and uses:</p>
-    <p><b>1. Location</b> — The App uses your device's approximate/precise location to compute local
-      weather and flight suitability. Location is used only momentarily for weather lookups and is not
-      stored on our servers.</p>
-    <p><b>2. Advertising (Google AdMob)</b> — The App shows ads via Google AdMob, which may
-      collect device information including the <b>Advertising ID</b> for ad delivery, measurement, and
-      fraud prevention. Users in the EEA/UK are shown a consent (UMP) form.
-      See <a href="https://policies.google.com/technologies/partner-sites">Google's data practices</a>.</p>
-    <p><b>3. Weather providers</b> — Coordinates are sent to WeatherAPI.com, MET Norway, and NOAA SWPC
-      to retrieve forecast/geomagnetic data. These providers act as service providers processing the
-      request on the App's behalf.</p>
-    <p><b>4. Stored data</b> — Aircraft profiles and settings are stored <b>only in on-device storage</b>
-      and are not transmitted externally.</p>
-    <p><b>5. Children</b> — The App is not directed to children under 13.</p>
-    <p><b>6. Data Deletion &amp; Retention</b> — FlyReady does not store personal data on its own servers.
-      Location is used only momentarily to fetch weather and is discarded immediately (not retained).
-      You can reset or delete your Advertising ID in your device's <b>[Settings &gt; Privacy &gt; Ads]</b>.
-      Uninstalling the App removes all on-device settings and aircraft profiles.
-      To request deletion of any data we may hold, or for any question, contact
-      <a href="mailto:harvey7926@gmail.com">harvey7926@gmail.com</a> — we respond within 30 days.</p>
-    <p class="muted"><b>Contact:</b> <a href="mailto:harvey7926@gmail.com">harvey7926@gmail.com</a></p>
+    <p>FlyReady (“the App”) calculates local weather and flight suitability for drone pilots.
+      The App has <b>no sign-up and stores no personal data on any server of ours.</b></p>
+
+    <h3>1. What we process, why, on what legal basis, and for how long</h3>
+    <div class="tablewrap">
+    <table>
+      <tr><th>Data</th><th>Purpose</th><th>Legal basis (GDPR Art. 6)</th><th>Retention</th></tr>
+      <tr>
+        <td>Location (latitude/longitude)</td>
+        <td>Look up weather and geomagnetic conditions at your position and compute flight suitability</td>
+        <td><b>Consent</b> (Art. 6(1)(a)) — obtained through the device location permission</td>
+        <td>Used for the request only; <b>never stored</b></td>
+      </tr>
+      <tr>
+        <td>Advertising ID, device and ad-interaction data</td>
+        <td>Ad delivery, measurement and fraud prevention</td>
+        <td>EEA/UK: <b>consent</b> via the UMP form. Elsewhere: as permitted by local law</td>
+        <td>Per Google's retention policy</td>
+      </tr>
+      <tr>
+        <td>Aircraft profiles, app and notification settings</td>
+        <td>Providing the App's features</td>
+        <td>Performance of a contract (Art. 6(1)(b))</td>
+        <td>On your device only; removed when you uninstall</td>
+      </tr>
+    </table>
+    </div>
+    <p class="muted">The App collects no account data at all — no name, email, phone number, contacts or photos.</p>
+
+    <h3>2. Data that stays on your device</h3>
+    <p>Aircraft profiles (weight, battery, propellers and so on), calculation results, app settings and
+      notification settings are stored <b>only in on-device storage</b> and are never transmitted.
+      Uninstalling the App deletes all of them.</p>
+
+    <h3>3. Third parties and international transfers</h3>
+    <p>The App sends data to the third parties below. The weather providers log requests (source IP,
+      requested coordinates) <b>for their own purposes under their own policies</b>; they are independent
+      controllers, not processors acting on our behalf.</p>
+    <div class="tablewrap">
+    <table>
+      <tr><th>Recipient</th><th>Data sent</th><th>Purpose</th><th>Country</th><th>Transfer basis</th></tr>
+      <tr><td>Google (AdMob)</td><td>Advertising ID, device data, IP</td><td>Ad delivery and measurement</td><td>United States and others</td>
+          <td>Your consent plus Google's Standard Contractual Clauses</td></tr>
+      <tr><td>WeatherAPI.com</td><td>Requested coordinates, source IP</td><td>Weather forecast</td><td>United Kingdom</td>
+          <td>UK is covered by an EU adequacy decision</td></tr>
+      <tr><td>MET Norway</td><td>Requested coordinates, source IP</td><td>Extended (day 4–7) forecast</td><td>Norway</td>
+          <td>Norway is an EEA member state</td></tr>
+      <tr><td>NOAA SWPC</td><td>Source IP</td><td>Geomagnetic (Kp) index</td><td>United States</td>
+          <td>Public data request; no coordinates sent</td></tr>
+    </table>
+    </div>
+    <p class="muted">We do not sell personal data, and we do not share it with third parties for their own advertising.</p>
+
+    <h3>4. EEA/UK users and your rights</h3>
+    <p>Users in the EEA and the UK are shown a <b>Google UMP consent form</b> on first launch; without
+      consent, no personalised ads are served. You may exercise these rights at any time:</p>
+    <ul>
+      <li><b>Access, rectification, erasure, restriction and portability</b> — because we hold no personal
+        data on a server, revoking the location permission or uninstalling the App stops and erases
+        everything immediately.</li>
+      <li><b>Withdraw consent</b> — revoke the location permission in device settings; ad consent can be
+        changed again from the consent form in the App.</li>
+      <li><b>Reset or delete your Advertising ID</b> — Android: Settings &gt; Privacy &gt; Ads.
+        iOS: Settings &gt; Privacy &amp; Security &gt; Tracking.</li>
+      <li><b>Lodge a complaint with a supervisory authority</b> — your national data protection authority
+        in the EEA/UK; in Korea, the Personal Information Protection Commission (privacy.go.kr).</li>
+    </ul>
+    <p>Write to <a href="mailto:harvey7926@gmail.com">harvey7926@gmail.com</a>; we respond within 30 days.</p>
+
+    <h3>5. Children under 13</h3>
+    <p>The App is not directed to children under 13 (under 14 in Korea) and does not knowingly collect
+      their personal data. If we learn that we have, we delete it immediately.</p>
+
+    <h3>6. Security</h3>
+    <p>All external requests use HTTPS. We operate no server of our own, so there is no stored personal
+      data to secure.</p>
+
+    <h3>7. Controller and changes to this policy</h3>
+    <p>Controller: Hojung Kim (<a href="mailto:harvey7926@gmail.com">harvey7926@gmail.com</a>)<br>
+      If this policy changes, the change and its effective date will be posted on this page.</p>
+    <p class="muted">The App is a reference aid and does not grant permission to fly. Check official
+      weather services and NOTAMs before flying, and follow the aviation rules of your country.</p>
   </div>
 </div>
 </body>
