@@ -69,8 +69,7 @@
     <thead><tr><th>항목</th><th>예시</th><th>이용 목적</th><th>법적 근거</th><th>보유 기간</th></tr></thead>
     <tbody>
       <tr><td>계정 정보</td><td>Google 계정 이메일·식별자·표시 이름·프로필 사진 URL(Android·iOS), Apple 사용자 식별자·이메일(iOS, Sign in with Apple)</td><td>로그인, Pro 자격 확인, 내 카메라 목록</td><td>계약 이행</td><td>계정 삭제 시까지</td></tr>
-      <tr><td>영상</td><td>카메라 휴대폰의 실시간 영상(음성 없음), (보는 쪽이 켠 경우) 서버 녹화</td><td>원격 보기, 녹화 보관·재생, 공유 링크</td><td>계약 이행</td><td>실시간 영상은 저장하지 않음. 서버 녹화는 이용자가 삭제하거나 계정 삭제 시까지</td></tr>
-      <tr><td>위치 정보</td><td>카메라 휴대폰의 위치</td><td>소유자의 지도에 내 카메라 위치 표시</td><td>계약 이행</td><td>최신 위치만 유지, 카메라 해제·계정 삭제 시 파기(공유 링크에서 위치 가리기 선택 가능)</td></tr>
+      <tr><td>영상</td><td>카메라 휴대폰의 실시간 영상(음성 없음), (보는 쪽이 켠 경우) 서버 녹화</td><td>원격 보기, 녹화 보관·재생, 공유 링크</td><td>계약 이행</td><td>실시간 영상은 저장하지 않음. 서버 녹화는 녹화 시작 후 30일이 지나면 자동 삭제되며, 그 전에도 이용자가 삭제하거나 계정을 삭제하면 파기(보관하려면 앱의 ‘이 폰에 저장’으로 휴대폰에 저장)</td></tr>
       <tr><td>구독 정보</td><td>Google Play 구매 토큰(Android), Apple 인앱 결제 영수증(iOS), 구독 상태(GCS Pro / Cam Pro)</td><td>Pro 자격 확인·유지(하나의 계정으로 세 앱 공통)</td><td>계약 이행</td><td>계정 삭제 시까지. 관련 법령이 보관을 요구하는 거래 기록은 그 기간</td></tr>
       <tr><td>기기 식별자</td><td>앱이 생성한 카메라 기기 ID·기기 모델명</td><td>카메라 등록·페어링</td><td>계약 이행</td><td>이용자가 카메라를 해제하거나 계정 삭제 시까지</td></tr>
       <tr><td>감지 결과</td><td>사람·차량 감지 상자 좌표와 종류(신원 정보 없음)</td><td>보는 화면에 표시, (녹화 시) 녹화 태그</td><td>계약 이행</td><td>실시간 전달만. 녹화 태그는 해당 녹화와 함께 파기</td></tr>
@@ -91,10 +90,10 @@
   </ul>
 
   <h2>3. 위치 정보의 사용</h2>
-  <p>위치 권한은 두 가지 용도로만 쓰입니다. ① Android가 휴대폰 핫스팟을 만들거나 찾을 때 위치 권한을 요구하므로
-  Wi-Fi 연결에 필요하며 이때 위치는 수집되지 않습니다. ② 이동망(Pro)으로 카메라를 켠 휴대폰의 위치를 이용자
-  본인의 지도에 표시합니다. 카메라가 켜진 동안 화면이 꺼져도 위치가 갱신되도록 포그라운드 서비스(알림 표시)로
-  동작하며, 카메라를 끄면 위치 사용도 멈춥니다. 백그라운드 위치 권한은 요청하지 않습니다.</p>
+  <p><strong>포켓홈캠은 위치 정보를 수집하지 않습니다.</strong> 카메라 휴대폰의 위치는 운영자 서버로 전송되지 않습니다.
+  Android에서 위치 권한을 요청하는 경우는 한 가지뿐입니다. Android가 휴대폰 핫스팟을 만들거나 찾을 때(같은 Wi-Fi 연결)
+  위치 권한을 요구하기 때문이며, 이때에도 위치는 수집·전송되지 않습니다. 화면이 꺼져도 핫스팟이 유지되도록
+  포그라운드 서비스(알림 표시)로 동작합니다. 백그라운드 위치 권한은 요청하지 않습니다.</p>
 
   <h2>4. 개인정보의 처리위탁 및 제3자 제공</h2>
   <table>
@@ -104,7 +103,7 @@
       <tr><td>Google LLC — Google Play 결제</td><td>Google 인프라(국외 포함)</td><td>Pro 구독 결제·자격 확인(Android)</td><td>구매 토큰·구독 상태</td></tr>
       <tr><td>Apple Inc. — Sign in with Apple</td><td>Apple 인프라(국외 포함)</td><td>로그인(iOS)</td><td>Apple 사용자 식별자·이메일(이용자가 선택한 경우 Apple 비공개 릴레이 이메일)</td></tr>
       <tr><td>Apple Inc. — 인앱 결제(In-App Purchase)</td><td>Apple 인프라(국외 포함)</td><td>Pro 구독 결제·자격 확인(iOS)</td><td>거래 영수증·구독 상태</td></tr>
-      <tr><td>운영자 서버</td><td>대한민국</td><td>인증, 이동망 영상 중계, (이용자가 켠 경우) 서버 녹화, 공유 링크(Pro)</td><td>계정·구독 상태·세션·카메라 위치·감지 좌표·(녹화 시) 영상</td></tr>
+      <tr><td>운영자 서버</td><td>대한민국</td><td>인증, 이동망 영상 중계, (이용자가 켠 경우) 서버 녹화, 공유 링크(Pro)</td><td>계정·구독 상태·세션·감지 좌표·(녹화 시) 영상</td></tr>
       <tr><td>WebRTC 연결 보조 서버(STUN/TURN)</td><td>운영자가 운영하는 서버</td><td>이동망 중계 경로 확보</td><td>IP 주소·포트 등 네트워크 메타데이터</td></tr>
     </tbody>
   </table>
@@ -198,8 +197,8 @@
   <hr style="margin:2rem 0; border:none; border-top:1px solid #e6e8ee;">
   <p class="muted">English summary: PocketHomeCam turns a spare phone into a home camera (Android and iOS, <code>com.deepmav.pockethomecam</code>).
   <strong>Video only — the app never uses the microphone.</strong> Over Wi-Fi nothing leaves your phones and no login is needed. With the Pro
-  cellular relay we process your Google or Apple sign-in identifier/e-mail, the camera phone's location, the live video (stored only if the
-  viewer turns on server recording), subscription status (Google Play Billing / Apple In-App Purchase) and an app-generated camera ID. Share
+  cellular relay we process your Google or Apple sign-in identifier/e-mail and the live video (stored only if the
+  viewer turns on server recording, and deleted automatically 30 days after it started), subscription status (Google Play Billing / Apple In-App Purchase) and an app-generated camera ID. Share
   links are explicit, open only with a six-digit code shown alongside them, expire after one hour and can be revoked (files already downloaded by recipients cannot be recalled). On-device
   person/vehicle detection sends only box coordinates — no face recognition. The camera phone always shows a persistent notification
   (Android) or on-screen indicator (iOS). Data is transported over TLS/DTLS-SRTP (relayed by our server, not end-to-end encrypted) and stored
