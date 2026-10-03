@@ -30,7 +30,7 @@
 <div class="wrap">
   <a class="back" href="./">&larr; FlyReady</a>
   <h1>개인정보 처리방침 / Privacy Policy</h1>
-  <p class="updated">최종 업데이트: 2026-09-22</p>
+  <p class="updated">최종 업데이트: 2026-10-03</p>
 
   <div class="card">
     <h2>한국어</h2>
@@ -45,7 +45,7 @@
         <td>위치정보(위도·경도)</td>
         <td>현재 위치의 기상·지자기 조회 및 비행 적합도 계산</td>
         <td>이용자의 <b>동의</b>(제6조 제1항 (a)) — 기기의 위치 권한으로 받습니다</td>
-        <td>조회 요청에만 일시 사용하며 <b>저장하지 않습니다</b></td>
+        <td>조회 요청에 사용하며 <b>서버에는 저장하지 않습니다</b>. 단, 안드로이드 앱은 마지막으로 조회한 위치 1건(좌표·지명)을 <b>기기 안에만</b> 보관해 매일 비행 알림(켠 경우)의 날씨 조회에 씁니다. 다음 조회 때 덮어쓰며, 앱 데이터를 지우거나 앱을 삭제하면 지워집니다</td>
       </tr>
       <tr>
         <td>광고 식별자(Advertising ID), 기기·광고 상호작용 정보</td>
@@ -71,7 +71,8 @@
 
     <h3>2. 기기 안에만 저장되어 전송되지 않는 정보</h3>
     <p>기체 프로필(중량·배터리·프로펠러 등), 계산 결과, 앱 설정, 알림 설정은 <b>기기 내부 저장소에만</b>
-      저장되며 외부로 전송되지 않습니다. 앱을 삭제하면 모두 지워집니다.</p>
+      저장되며 외부로 전송되지 않습니다. 안드로이드 앱은 마지막 조회 위치 1건도 기기 안에 보관하며, 매일 비행 알림을 켠 경우
+      알림 시각에 이 위치로 날씨를 조회합니다(WeatherAPI.com으로 좌표 전송). 앱을 삭제하면 모두 지워집니다.</p>
 
     <h3>3. 제3자 제공 및 국외 이전</h3>
     <p>본 앱은 아래 제3자에게 정보를 전송합니다. 기상 제공자들은 <b>각자의 방침에 따라 요청 로그(접속 IP·요청
@@ -89,6 +90,8 @@
           <td>노르웨이는 EEA 회원국</td></tr>
       <tr><td>NOAA SWPC (미국 해양대기청)</td><td>접속 IP</td><td>지자기(Kp) 지수 조회</td><td>미국</td>
           <td>공개 데이터 조회, 좌표 미전송</td></tr>
+      <tr><td>기기 운영체제의 주소 변환 서비스 (Android: Google, iOS: Apple)</td><td>조회 좌표</td><td>현재 위치의 지명 표시</td><td>미국 등</td>
+          <td>운영체제 제공자의 방침에 따름</td></tr>
     </table>
     </div>
     <p class="muted">이 밖에 개인정보를 판매하거나 광고 목적으로 제3자와 공유하지 않습니다.</p>
@@ -137,7 +140,7 @@
         <td>Location (latitude/longitude)</td>
         <td>Look up weather and geomagnetic conditions at your position and compute flight suitability</td>
         <td><b>Consent</b> (Art. 6(1)(a)) — obtained through the device location permission</td>
-        <td>Used for the request only; <b>never stored</b></td>
+        <td>Used for the request; <b>never stored on any server</b>. On Android, the last looked-up location (coordinates and place name) is kept <b>on your device only</b> and used for the daily flight notification's weather lookup (if enabled); it is overwritten on the next lookup and removed when you clear the App's data or uninstall</td>
       </tr>
       <tr>
         <td>Advertising ID, device and ad-interaction data</td>
@@ -164,7 +167,8 @@
     <h3>2. Data that stays on your device</h3>
     <p>Aircraft profiles (weight, battery, propellers and so on), calculation results, app settings and
       notification settings are stored <b>only in on-device storage</b> and are never transmitted.
-      Uninstalling the App deletes all of them.</p>
+      On Android the last looked-up location is also kept on the device; if the daily notification is on, it is used
+      at notification time to fetch weather (coordinates sent to WeatherAPI.com). Uninstalling the App deletes all of them.</p>
 
     <h3>3. Third parties and international transfers</h3>
     <p>The App sends data to the third parties below. The weather providers log requests (source IP,
@@ -183,6 +187,8 @@
           <td>Norway is an EEA member state</td></tr>
       <tr><td>NOAA SWPC</td><td>Source IP</td><td>Geomagnetic (Kp) index</td><td>United States</td>
           <td>Public data request; no coordinates sent</td></tr>
+      <tr><td>Your device OS reverse-geocoding service (Android: Google, iOS: Apple)</td><td>Requested coordinates</td><td>Showing the place name of your location</td><td>United States and others</td>
+          <td>Per the OS provider's policy</td></tr>
     </table>
     </div>
     <p class="muted">We do not sell personal data, and we do not share it with third parties for their own advertising.</p>
