@@ -30,7 +30,7 @@
 <div class="wrap">
   <a class="back" href="./">&larr; FlyReady</a>
   <h1>개인정보 처리방침 / Privacy Policy</h1>
-  <p class="updated">최종 업데이트: 2026-10-03</p>
+  <p class="updated">최종 업데이트: 2026-10-09</p>
 
   <div class="card">
     <h2>한국어</h2>
@@ -54,7 +54,7 @@
         <td>Google의 보관 정책을 따릅니다</td>
       </tr>
       <tr>
-        <td>기능 사용 통계(어떤 탭·계산·예보 조회·알림 설정을 썼는지), 기기 종류·OS·앱 언어·국가</td>
+        <td>기능 사용 통계(어떤 탭·계산·예보 조회·알림 설정을 썼는지, 광고 제거 구매의 시작·완료·복원 여부), 기기 종류·OS·앱 언어·국가</td>
         <td>어떤 기능이 쓰이는지 파악해 앱 개선(Google Firebase Analytics). 좌표·지명·프로필 이름·입력 수치·광고 식별자는 보내지 않으며 이용자를 식별하지 않습니다</td>
         <td>정당한 이익(제6조 제1항 (f)) — 서비스 개선</td>
         <td>Google 애널리틱스 기본 보존 기간(최대 14개월)</td>
@@ -67,12 +67,12 @@
       </tr>
     </table>
     </div>
-    <p class="muted">본 앱은 이름·이메일·전화번호·연락처·사진 등 어떤 계정 정보도 수집하지 않습니다.</p>
+    <p class="muted">본 앱은 이름·이메일·전화번호·연락처·사진 등 어떤 계정 정보도 수집하지 않습니다. 광고 제거 구매의 결제는 Apple App Store·Google Play가 처리하며, 본 앱은 카드 번호 등 결제 정보를 받지 않습니다.</p>
 
     <h3>2. 기기 안에만 저장되어 전송되지 않는 정보</h3>
     <p>기체 프로필(중량·배터리·프로펠러 등), 계산 결과, 앱 설정, 알림 설정은 <b>기기 내부 저장소에만</b>
       저장되며 외부로 전송되지 않습니다. 안드로이드 앱은 마지막 조회 위치 1건도 기기 안에 보관하며, 매일 비행 알림을 켠 경우
-      알림 시각에 이 위치로 날씨를 조회합니다(WeatherAPI.com으로 좌표 전송). 앱을 삭제하면 모두 지워집니다.</p>
+      알림 시각에 이 위치로 날씨를 조회합니다(날씨 중계 서버를 거쳐 WeatherAPI.com으로 좌표 전송). 앱을 삭제하면 모두 지워집니다.</p>
 
     <h3>3. 제3자 제공 및 국외 이전</h3>
     <p>본 앱은 아래 제3자에게 정보를 전송합니다. 기상 제공자들은 <b>각자의 방침에 따라 요청 로그(접속 IP·요청
@@ -84,7 +84,9 @@
           <td>이용자 동의 + Google의 표준계약조항(SCC)</td></tr>
       <tr><td>Google (Firebase Analytics)</td><td>기능 사용 이벤트, 기기·OS·앱 언어, 접속 IP(국가 판별 후 폐기)</td><td>사용 통계·앱 개선</td><td>미국 등</td>
           <td>Google의 표준계약조항(SCC)</td></tr>
-      <tr><td>WeatherAPI.com</td><td>조회 좌표, 접속 IP</td><td>기상 예보 조회</td><td>영국</td>
+      <tr><td>본 앱 운영자의 날씨 중계 서버 (wx.nadam.pictures)</td><td>조회 좌표, 접속 IP</td><td>WeatherAPI.com 조회를 대신 전달(API 키 보호). 좌표를 접근 기록에 남기지 않으며, 같은 요청을 줄이려고 응답을 최대 10분간, 과다 요청을 막으려고 접속 IP를 1분간 메모리에만 두었다가 지웁니다. 연결은 Cloudflare 보안 터널을 거칩니다</td><td>대한민국</td>
+          <td>운영자 직접 처리(국외 이전 아님). Cloudflare는 전송 경로 제공자로 자체 방침에 따름</td></tr>
+      <tr><td>WeatherAPI.com</td><td>조회 좌표(중계 서버를 거쳐 전달). 위치 없이 시작해 IP로 대략 위치를 찾는 경우에만 접속 IP를 전달</td><td>기상 예보 조회</td><td>영국</td>
           <td>영국은 EU 적정성 결정 대상국</td></tr>
       <tr><td>MET Norway (노르웨이 기상청)</td><td>조회 좌표, 접속 IP</td><td>4~7일 확장 예보 조회</td><td>노르웨이</td>
           <td>노르웨이는 EEA 회원국</td></tr>
@@ -149,7 +151,7 @@
         <td>Per Google's retention policy</td>
       </tr>
       <tr>
-        <td>Feature-usage statistics (which tabs, calculations, forecast lookups and notification settings are used), device type, OS, app language, country</td>
+        <td>Feature-usage statistics (which tabs, calculations, forecast lookups and notification settings are used, and whether an ad-removal purchase was started, completed or restored), device type, OS, app language, country</td>
         <td>Understanding which features are used so we can improve the App (Google Firebase Analytics). No coordinates, place names, profile names, raw input values or advertising identifiers are sent, and you are not identified</td>
         <td>Legitimate interest (Art. 6(1)(f)) — service improvement</td>
         <td>Google Analytics default retention (up to 14 months)</td>
@@ -162,13 +164,13 @@
       </tr>
     </table>
     </div>
-    <p class="muted">The App collects no account data at all — no name, email, phone number, contacts or photos.</p>
+    <p class="muted">The App collects no account data at all — no name, email, phone number, contacts or photos. Ad-removal purchases are processed by the Apple App Store or Google Play; the App never receives card numbers or other payment details.</p>
 
     <h3>2. Data that stays on your device</h3>
     <p>Aircraft profiles (weight, battery, propellers and so on), calculation results, app settings and
       notification settings are stored <b>only in on-device storage</b> and are never transmitted.
       On Android the last looked-up location is also kept on the device; if the daily notification is on, it is used
-      at notification time to fetch weather (coordinates sent to WeatherAPI.com). Uninstalling the App deletes all of them.</p>
+      at notification time to fetch weather (coordinates sent to WeatherAPI.com through our weather relay server). Uninstalling the App deletes all of them.</p>
 
     <h3>3. Third parties and international transfers</h3>
     <p>The App sends data to the third parties below. The weather providers log requests (source IP,
@@ -181,7 +183,9 @@
           <td>Your consent plus Google's Standard Contractual Clauses</td></tr>
       <tr><td>Google (Firebase Analytics)</td><td>Feature-usage events, device/OS/app language, source IP (used to derive the country, then discarded)</td><td>Usage statistics and App improvement</td><td>United States and others</td>
           <td>Google's Standard Contractual Clauses (SCC)</td></tr>
-      <tr><td>WeatherAPI.com</td><td>Requested coordinates, source IP</td><td>Weather forecast</td><td>United Kingdom</td>
+      <tr><td>Our own weather relay server (wx.nadam.pictures)</td><td>Requested coordinates, source IP</td><td>Forwards the WeatherAPI.com request so the API key stays private. Coordinates are not written to access logs; responses are kept in memory for at most 10 minutes to avoid duplicate requests, and your IP for 1 minute to prevent abuse, then discarded. The connection runs through a Cloudflare secure tunnel</td><td>Republic of Korea</td>
+          <td>Processed by the controller itself (no international transfer); Cloudflare acts as the transport provider under its own policy</td></tr>
+      <tr><td>WeatherAPI.com</td><td>Requested coordinates (forwarded by the relay server). Your IP is passed on only when you start without location and the approximate location is looked up from your IP</td><td>Weather forecast</td><td>United Kingdom</td>
           <td>UK is covered by an EU adequacy decision</td></tr>
       <tr><td>MET Norway</td><td>Requested coordinates, source IP</td><td>Extended (day 4–7) forecast</td><td>Norway</td>
           <td>Norway is an EEA member state</td></tr>
