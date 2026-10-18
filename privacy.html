@@ -84,11 +84,13 @@
           <td>이용자 동의 + Google의 표준계약조항(SCC)</td></tr>
       <tr><td>Google (Firebase Analytics)</td><td>기능 사용 이벤트, 기기·OS·앱 언어, 접속 IP(국가 판별 후 폐기)</td><td>사용 통계·앱 개선</td><td>미국 등</td>
           <td>Google의 표준계약조항(SCC)</td></tr>
-      <tr><td>본 앱 운영자의 날씨 중계 서버 (wx.nadam.pictures)</td><td>조회 좌표, 접속 IP</td><td>WeatherAPI.com 조회를 대신 전달(API 키 보호). 좌표를 접근 기록에 남기지 않으며, 같은 요청을 줄이려고 응답을 최대 10분간, 과다 요청을 막으려고 접속 IP를 1분간 메모리에만 두었다가 지웁니다. 연결은 Cloudflare 보안 터널을 거칩니다</td><td>대한민국</td>
+      <tr><td>본 앱 운영자의 날씨 중계 (Cloudflare Workers — 1순위 경로)</td><td>조회 좌표(약 1 km 단위로 반올림), 접속 IP</td><td>WeatherAPI.com 조회를 대신 전달(API 키 보호). 운영자가 만든 프로그램이 Cloudflare의 전 세계 데이터센터에서 실행되며, 좌표·IP를 기록으로 남기지 않습니다. 같은 요청을 줄이려고 좌표 조회 응답을 데이터센터 캐시에 최대 10분 두고(IP로 위치를 찾는 조회는 캐시하지 않음), 과다 요청을 막으려고 접속 IP별 요청 횟수를 1분 단위로 셉니다. 저장하는 것은 하루 전체 호출 횟수(숫자 하나)뿐입니다</td><td>미국 등 (요청을 받은 Cloudflare 데이터센터 소재국)</td>
+          <td>Cloudflare가 수탁자로 처리 — Cloudflare 데이터 처리 부속서(DPA)와 표준계약조항(SCC)</td></tr>
+      <tr><td>본 앱 운영자의 날씨 중계 서버 (wx.nadam.pictures — 2순위 경로)</td><td>조회 좌표, 접속 IP</td><td>WeatherAPI.com 조회를 대신 전달(API 키 보호). 좌표를 접근 기록에 남기지 않으며, 같은 요청을 줄이려고 응답을 최대 10분간, 과다 요청을 막으려고 접속 IP를 1분간 메모리에만 두었다가 지웁니다. 연결은 Cloudflare 보안 터널을 거칩니다</td><td>대한민국</td>
           <td>운영자 직접 처리(국외 이전 아님). Cloudflare는 전송 경로 제공자로 자체 방침에 따름</td></tr>
       <tr><td>WeatherAPI.com</td><td>조회 좌표(중계 서버를 거쳐 전달). 위치 없이 시작해 IP로 대략 위치를 찾는 경우에만 접속 IP를 전달</td><td>기상 예보 조회</td><td>영국</td>
           <td>영국은 EU 적정성 결정 대상국</td></tr>
-      <tr><td>MET Norway (노르웨이 기상청)</td><td>조회 좌표, 접속 IP</td><td>4~7일 확장 예보 조회</td><td>노르웨이</td>
+      <tr><td>MET Norway (노르웨이 기상청)</td><td>조회 좌표, 접속 IP</td><td>4~7일 확장 예보 조회, 그리고 1~3일 예보를 받지 못할 때의 대체 예보</td><td>노르웨이</td>
           <td>노르웨이는 EEA 회원국</td></tr>
       <tr><td>NOAA SWPC (미국 해양대기청)</td><td>접속 IP</td><td>지자기(Kp) 지수 조회</td><td>미국</td>
           <td>공개 데이터 조회, 좌표 미전송</td></tr>
@@ -119,7 +121,7 @@
       의도적으로 수집하지 않습니다. 아동의 정보가 수집된 사실을 알게 되면 즉시 삭제합니다.</p>
 
     <h3>6. 안전성 확보 조치</h3>
-    <p>모든 외부 통신은 HTTPS로 암호화됩니다. 본 앱은 자체 서버를 운영하지 않으므로 보관 중인 개인정보가
+    <p>모든 외부 통신은 HTTPS로 암호화됩니다. 운영자의 날씨 중계(위 5항)는 좌표·IP를 저장하지 않으므로 보관 중인 개인정보가
       없습니다.</p>
 
     <h3>7. 개인정보 보호책임자 및 고지의 의무</h3>
@@ -183,11 +185,13 @@
           <td>Your consent plus Google's Standard Contractual Clauses</td></tr>
       <tr><td>Google (Firebase Analytics)</td><td>Feature-usage events, device/OS/app language, source IP (used to derive the country, then discarded)</td><td>Usage statistics and App improvement</td><td>United States and others</td>
           <td>Google's Standard Contractual Clauses (SCC)</td></tr>
-      <tr><td>Our own weather relay server (wx.nadam.pictures)</td><td>Requested coordinates, source IP</td><td>Forwards the WeatherAPI.com request so the API key stays private. Coordinates are not written to access logs; responses are kept in memory for at most 10 minutes to avoid duplicate requests, and your IP for 1 minute to prevent abuse, then discarded. The connection runs through a Cloudflare secure tunnel</td><td>Republic of Korea</td>
+      <tr><td>Our own weather relay (Cloudflare Workers — first route)</td><td>Requested coordinates (rounded to about 1 km), source IP</td><td>Forwards the WeatherAPI.com request so the API key stays private. Code we wrote runs in Cloudflare's worldwide data centres and does not log coordinates or IPs. To avoid duplicate requests, responses to coordinate lookups are cached in the data centre for at most 10 minutes (lookups that find your location from your IP are never cached), and requests per source IP are counted per minute to prevent abuse. The only thing stored is the total number of calls per day (a single number)</td><td>United States and others (the country of the Cloudflare data centre that receives the request)</td>
+          <td>Cloudflare processes on our behalf under its Data Processing Addendum (DPA) and Standard Contractual Clauses (SCC)</td></tr>
+      <tr><td>Our own weather relay server (wx.nadam.pictures — second route)</td><td>Requested coordinates, source IP</td><td>Forwards the WeatherAPI.com request so the API key stays private. Coordinates are not written to access logs; responses are kept in memory for at most 10 minutes to avoid duplicate requests, and your IP for 1 minute to prevent abuse, then discarded. The connection runs through a Cloudflare secure tunnel</td><td>Republic of Korea</td>
           <td>Processed by the controller itself (no international transfer); Cloudflare acts as the transport provider under its own policy</td></tr>
       <tr><td>WeatherAPI.com</td><td>Requested coordinates (forwarded by the relay server). Your IP is passed on only when you start without location and the approximate location is looked up from your IP</td><td>Weather forecast</td><td>United Kingdom</td>
           <td>UK is covered by an EU adequacy decision</td></tr>
-      <tr><td>MET Norway</td><td>Requested coordinates, source IP</td><td>Extended (day 4–7) forecast</td><td>Norway</td>
+      <tr><td>MET Norway</td><td>Requested coordinates, source IP</td><td>Extended (day 4–7) forecast, and a fallback forecast when the day 1–3 forecast cannot be fetched</td><td>Norway</td>
           <td>Norway is an EEA member state</td></tr>
       <tr><td>NOAA SWPC</td><td>Source IP</td><td>Geomagnetic (Kp) index</td><td>United States</td>
           <td>Public data request; no coordinates sent</td></tr>
@@ -218,7 +222,7 @@
       their personal data. If we learn that we have, we delete it immediately.</p>
 
     <h3>6. Security</h3>
-    <p>All external requests use HTTPS. We operate no server of our own, so there is no stored personal
+    <p>All external requests use HTTPS. Our weather relays (section 5) do not store coordinates or IPs, so there is no stored personal
       data to secure.</p>
 
     <h3>7. Controller and changes to this policy</h3>
