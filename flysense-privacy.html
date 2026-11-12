@@ -26,7 +26,7 @@
 <div class="wrap">
   <a class="back" href="/">&larr; 미나래</a>
   <h1>FlySense — 개인정보 처리방침 / Privacy Policy</h1>
-  <p class="updated">최종 업데이트: 2026-11-11</p>
+  <p class="updated">최종 업데이트: 2026-11-12</p>
 
   <div class="card">
     <h2>한국어</h2>
@@ -44,9 +44,12 @@
        이 과정에서 좌표가 기기 제조사·운영체제 제공자(Apple 또는 Google)로 전달될 수 있으며,
        그 처리는 해당 사업자의 개인정보 처리방침을 따릅니다.</p>
 
-    <h2>3. 지도</h2>
+    <h2>3. 지도·지자기 지수</h2>
     <p>지도 배경은 OpenFreeMap(OpenStreetMap 데이터)에서 타일을 내려받아 그립니다.
        이때 보고 있는 지도 영역과 기기의 IP 주소가 해당 서버에 전달됩니다.</p>
+    <p>버전 1.2.0부터 지자기 교란 지수(Kp)를 보여주기 위해 미국 해양대기청 우주기상예보센터(NOAA SWPC,
+       services.swpc.noaa.gov)의 공개 자료를 내려받습니다. 요청에는 위치·기기 식별자가 포함되지 않으며,
+       통신 과정에서 기기의 IP 주소만 해당 서버에 전달됩니다.</p>
 
     <h2>4. 카메라</h2>
     <p>역광 회피 방향·자기장 영향권·안테나 조준을 카메라 화면 위에 겹쳐 보여주기 위해 사용합니다.
@@ -57,7 +60,9 @@
        기기 안에서만 사용되며 외부로 전송되지 않습니다.</p>
 
     <h2>6. 기기에 저장되는 것</h2>
-    <p>기록한 이동 궤적 파일과 앱 설정은 <strong>기기 내부 저장소에만</strong> 저장됩니다.
+    <p>기록한 이동 궤적 파일, 비행 전 체크리스트, 앱 설정은 <strong>기기 내부 저장소에만</strong> 저장됩니다.
+       현장 측정 요약은 앱을 실행하는 동안에만 유지되며, 공유 버튼을 누르면 이용자가 고른 앱으로
+       요약 이미지(날짜와 측정 결과, 좌표·주소 없음)가 전달됩니다.
        앱을 삭제하면 함께 지워집니다.</p>
 
     <h2>7. 광고 (Google AdMob) — 버전 1.0.5 이하</h2>
@@ -104,9 +109,12 @@
        operating system. Coordinates may therefore be passed to your OS provider (Apple or Google) and
        handled under their privacy policies.</p>
 
-    <h2>3. Maps</h2>
+    <h2>3. Maps and geomagnetic index</h2>
     <p>Map tiles are fetched from OpenFreeMap (OpenStreetMap data). The map area you are viewing and your
        device's IP address are visible to that service.</p>
+    <p>From version 1.2.0, to show the geomagnetic activity index (Kp), the App downloads public data from
+       the NOAA Space Weather Prediction Center (services.swpc.noaa.gov). The request contains no location
+       or device identifier; only your device's IP address is visible to that service.</p>
 
     <h2>4. Camera</h2>
     <p>Used to overlay the recommended shooting direction, the magnetic influence zone and the antenna
@@ -117,8 +125,9 @@
        device only and are not transmitted.</p>
 
     <h2>6. Data stored on your device</h2>
-    <p>Recorded track files and app settings are stored <strong>only in on-device storage</strong> and are
-       removed when you uninstall the App.</p>
+    <p>Recorded track files, the preflight checklist and app settings are stored <strong>only in on-device storage</strong> and are
+       removed when you uninstall the App. The site summary is kept only while the App is running; when you tap Share,
+       a summary image (date and measurement results, no coordinates or address) is passed to the app you choose.</p>
 
     <h2>7. Advertising (Google AdMob) — versions up to 1.0.5</h2>
     <p>From version 1.1.0 the App contains no advertising SDK. Earlier versions (1.0.5 and below) showed ads via Google AdMob, which may collect device information including the Advertising
