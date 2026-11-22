@@ -26,23 +26,32 @@
 <div class="wrap">
   <a class="back" href="/">&larr; 미나래</a>
   <h1>FlyGuard — 개인정보 처리방침 / Privacy Policy</h1>
-  <p class="updated">최종 업데이트: 2026-11-11</p>
+  <p class="updated">최종 업데이트: 2026-11-22 (앱 버전 1.2.1)</p>
 
   <div class="card">
     <h2>한국어</h2>
     <p>FlyGuard(“본 앱”)는 드론 비행 전후에 주변을 살피는 점검 도구입니다. 본 앱은
        <strong>계정도 서버도 광고도 없으며</strong>, 측정과 판정은 전부 기기 안에서 이루어집니다.
        버전 1.1.0부터 기능 사용 통계를 위해 Google Firebase Analytics 를 포함합니다.</p>
+    <p>단말기 위치의 이용은 <a href="./location-terms.html">위치기반서비스 이용약관</a>에도 정해져 있으며, 이 방침은 그 약관과 같은 내용을 따릅니다.</p>
 
     <h2>1. 위치 정보</h2>
-    <p>방향 안내 탭에서 표시 지점까지의 방위를 계산하고, GNSS 건강 탭에서 위성 신호와 위치 흔들림을
-       판정하기 위해 기기의 위치를 사용합니다. Android 12 미만에서는 블루투스·Wi-Fi 방송을 읽기 위해서도
-       운영체제가 위치 권한을 요구합니다. 앱이 화면에 떠 있는 동안에만 사용하며, 백그라운드에서는 받지 않습니다.
-       위치는 본 앱의 서버로 보내지 않습니다(본 앱에는 서버가 없습니다).</p>
+    <p>방향 안내 탭에서 표시 지점까지의 방위·거리를 계산하고 지도를 현재 위치로 옮기며, GNSS 건강 탭에서 위성 신호와 위치 흔들림을
+       판정하기 위해 기기의 위치를 사용합니다. 앱이 화면에 떠 있는 동안에만 사용하며, 백그라운드에서는 받지 않습니다.
+       위치는 본 앱의 서버로 보내지 않으며(본 앱에는 서버가 없습니다), <strong>파일이나 설정에 저장하지 않습니다</strong> — 측정하는 동안 메모리에만 둡니다.
+       지도에 표시하는 지점(실종 지점 등)은 이용자가 지도를 누르거나 좌표를 입력해 정하는 것으로 기기 위치가 아니며, 저장하지 않습니다.</p>
+    <p><strong>위치기반서비스 동의:</strong> 버전 1.2.1부터 GPS 측정을 시작하거나 방향 안내 탭을 처음 열 때 위치기반서비스 이용약관 동의를 받으며, 동의한 뒤에만 위치 권한을 요청하고 위치를 씁니다.
+       동의하지 않으면 해당 부분에 안내 카드가 표시되고, 지도·좌표 입력 등 위치가 필요 없는 기능은 그대로 쓸 수 있습니다.
+       지원 시트의 「위치 이용 동의 철회」를 누르면 위치 사용을 즉시 멈추고, 메모리의 측위값, 지도 조각 캐시, 위치 이용 기록을 지웁니다. 철회한 뒤 카드의 「동의하기」로 다시 동의할 수 있습니다.</p>
+    <p><strong>위치 이용 기록:</strong> 위치정보법 제16조 제2항에 따라 위치를 쓴 일시·목적(GPS 상태 표시, 방향·거리 안내, 지도 표시)·받는 곳(기기 안에서만, OpenFreeMap)을 기기 안에 자동으로 기록합니다.
+       좌표는 넣지 않으며, 같은 목적·받는 곳은 1시간 단위로 한 줄씩 남기고, 기록한 날부터 180일 뒤 자동 삭제합니다. 지원 시트의 「위치 이용 기록」에서 열람할 수 있습니다.</p>
 
     <h2>2. 지도</h2>
     <p>지도 배경은 OpenFreeMap(OpenStreetMap 데이터)에서 타일을 내려받아 그립니다.
-       이때 보고 있는 지도 영역과 기기의 IP 주소가 해당 서버에 전달됩니다. 본 앱이 밖으로 내보내는 통신은 이것뿐입니다.</p>
+       이때 보고 있는 지도 영역과 기기의 IP 주소가 해당 서버에 전달됩니다. 방향 안내 탭은 처음 위치를 잡으면 지도를 현재 위치 주변으로 옮기므로,
+       좌표 자체는 보내지 않지만 요청한 지도 조각(약 1 km 격자)과 IP로 대략의 지역이 드러날 수 있습니다.
+       내려받은 지도 조각은 기기에 임시 저장(캐시)되며 좌표는 아닙니다. 위치 이용 동의를 철회하면 이 캐시도 지웁니다.
+       본 앱이 밖으로 내보내는 통신은 이것과 사용 통계(8항)뿐입니다.</p>
 
     <h2>3. 마이크</h2>
     <p>드론 소리 탐지와 프로펠러 점검은 마이크 소리를 실시간으로 분석합니다. 소리는 주파수 성분으로만 계산되며
@@ -53,7 +62,8 @@
        외부로 전송하지도 않습니다.</p>
 
     <h2>5. 블루투스·Wi-Fi 스캔</h2>
-    <p>전파 검색 탭은 주변 기기가 스스로 방송하는 Remote ID와 기기 이름을 수신해 화면에 보여줍니다.
+    <p>현재 버전에서는 전파 검색 탭을 제공하지 않습니다(화면에 표시되지 않으며 블루투스·Wi-Fi 스캔을 하지 않음). 아래는 이 탭을 다시 제공할 때의 처리이며, 그때는 이 방침과 위치기반서비스 이용약관을 먼저 고칩니다.
+       전파 검색 탭은 주변 기기가 스스로 방송하는 Remote ID와 기기 이름을 수신해 화면에 보여줍니다.
        본 앱은 어떤 기기에도 접속하거나 신호를 보내지 않으며, 수신한 내용은 화면에 표시하는 동안만 메모리에 두고
        저장하지 않습니다. Remote ID 방송에 조종자 위치가 들어 있더라도 본 앱은 이를 화면에 표시하지 않으며, 기체의
        위치·식별번호·속도만 보여줍니다. iPhone에서는 블루투스 방송만 수신하며, Wi-Fi Remote ID 수신은 Android에서만 됩니다.</p>
@@ -62,21 +72,26 @@
     <p>진동 탭은 가속도·자이로 센서를, 날씨 변화 탭은 기압계를 읽습니다. 기기 안에서만 계산되며 외부로 전송되지 않습니다.</p>
 
     <h2>7. 기기에 저장되는 것</h2>
-    <p>선택한 언어 설정만 기기 내부 저장소에 저장됩니다. 측정 결과는 저장하지 않으며, 앱을 삭제하면 설정도 함께 지워집니다.</p>
+    <p>선택한 언어 등 앱 설정, 위치 약관·사용 통계 동의 상태, 위치 이용 기록(좌표 없음, 180일), 그리고 드론 소리 탐지 기록이 기기 내부 저장소에 저장됩니다.
+       탐지 기록에는 <strong>위치(좌표)가 없으며</strong> 시각·길이·판정·주파수·소리 크기 수치만 담고, 최근 500건까지 이용자가 지울 때까지 보관합니다. 이용자가 공유를 누르면 탐지 기록 CSV 파일(위치 열 없음)이 이용자가 고른 앱으로 전달됩니다.
+       그 밖의 측정 결과와 위치는 저장하지 않으며, 앱을 삭제하면 모두 지워집니다. 다만 기기 백업(안드로이드 Google 백업, iCloud 등)을 켠 경우 앱 데이터가 그 백업에 포함될 수 있습니다.</p>
 
     <h2>8. 광고·사용 통계</h2>
     <p>본 앱은 광고를 게재하지 않으며 추적(여러 앱·웹사이트에 걸친 이용자 추적)을 하지 않습니다.
-       버전 1.1.0부터 Google Firebase Analytics 로 어떤 탭·측정·설정이 쓰이는지, 기기 종류·OS·앱 언어·국가를 수집해
-       앱 개선에 씁니다. 위치·소리·전파 수신 내용·기기 이름·입력 수치는 보내지 않으며 이용자를 식별하지 않습니다.
-       광고 식별자는 수집하지 않습니다. 보유 기간은 Google 애널리틱스 기본 보존 기간(최대 14개월)을 따릅니다.
+       버전 1.1.0부터 Google Firebase Analytics 로 어떤 탭·측정·설정이 쓰이는지, 앱 인스턴스 ID(설치마다 무작위로 정해지는 식별자),
+       기기 종류·OS·앱 버전·앱 언어, 접속 IP로 추정한 대략적 지역(국가·도시 수준, IP는 저장하지 않음)을 수집해
+       앱 개선에 씁니다. 좌표·지명·소리·전파 수신 내용·기기 이름·입력 수치는 보내지 않으며, 이름·계정 등으로 이용자를 식별하지 않습니다.
+       광고 식별자는 수집하지 않습니다.
+       기기의 지역·언어 설정이 유럽(EEA·영국·스위스)을 가리키거나 지역을 알 수 없으면, 「사용 통계」 창에서 허용하기 전에는 Firebase를 시작하지 않아 아무 통계도 보내지 않으며, 거부하면 보내지 않습니다(법적 근거: 동의).
+       그 밖의 지역은 앱 개선이라는 정당한 이익에 근거해 수집합니다. 모든 지역에서 지원 시트의 「사용 통계 보내기」로 언제든 끄고 켤 수 있습니다. 보유 기간은 Google 애널리틱스 기본 보존 기간(최대 14개월)을 따릅니다.
        Google의 데이터 처리: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com</a></p>
 
     <h2>9. 아동</h2>
-    <p>본 앱은 만 13세 미만 아동을 대상으로 하지 않습니다.</p>
+    <p>본 앱은 만 13세 미만(대한민국은 만 14세 미만) 아동을 대상으로 하지 않습니다.</p>
 
     <h2>10. 데이터 삭제 및 문의</h2>
     <p>FlyGuard는 개인정보를 수집하거나 자체 서버에 저장하지 않으므로 삭제할 서버 데이터가 없습니다.
-       앱을 삭제하면 기기에 저장된 설정이 제거됩니다. 문의는 harvey7926@gmail.com 으로 보내 주시면
+       위치 이용 동의를 철회하면 지도 캐시와 위치 이용 기록이, 앱을 삭제하면 기기에 저장된 설정·탐지 기록이 모두 제거됩니다. 탐지 기록은 앱 안에서 지울 수 있습니다. 문의는 harvey7926@gmail.com 으로 보내 주시면
        접수 후 30일 이내에 답변합니다.</p>
     <p class="muted">문의: harvey7926@gmail.com</p>
   </div>
@@ -88,16 +103,26 @@
     <p>FlyGuard (“the App”) is a set of checks for before and after a drone flight. The App has
        <strong>no account, no server and no ads</strong>; all measurement and assessment happens on your device.
        From version 1.1.0 it includes Google Firebase Analytics for feature-usage statistics.</p>
+    <p>Use of your device location is also governed by the <a href="./location-terms.html#en">Location-Based Service Terms</a>; this policy follows the same facts as those terms.</p>
 
     <h2>1. Location</h2>
-    <p>Your device's position is used to compute the bearing to a marked point on the direction tab, and to
-       judge satellite signal and position wander on the GNSS health tab. On Android below 12 the operating system
-       also requires the location permission to read Bluetooth and Wi-Fi broadcasts. Location is used only while
-       the App is on screen, never in the background, and is never sent to a server of ours (there is none).</p>
+    <p>Your device's position is used to compute the bearing and distance to a marked point and to move the map to your position on the direction tab, and to
+       judge satellite signal and position wander on the GNSS health tab. Location is used only while
+       the App is on screen, never in the background, is never sent to a server of ours (there is none), and is
+       <strong>not saved to any file or setting</strong> — it is held in memory only while measuring.
+       A point you mark on the map (such as where a drone was lost) is set by tapping the map or typing coordinates; it is not your device location and is not saved.</p>
+    <p><strong>Location consent:</strong> from version 1.2.1 the App asks you to accept the Location-Based Service Terms when you start a GPS measurement or first open the direction tab, and asks for the location permission and uses your location only after you accept.
+       If you do not, a notice card is shown there, and features that need no location, such as the map and coordinate entry, keep working.
+       "Withdraw location consent" in the Support sheet stops location use at once and deletes the position data in memory, the map tile cache and the location use record. You can consent again from the card's "Agree" button.</p>
+    <p><strong>Location use record:</strong> as required by Article 16(2) of the Korean Location Information Act, the App automatically records on your device when your location was used, for what purpose (GPS health display, direction and distance guide, map display) and where it went (on this device only, OpenFreeMap).
+       No coordinates are included; the same purpose and recipient are grouped into one line per hour, and each entry is deleted automatically after 180 days. You can view it under "Location use record" in the Support sheet.</p>
 
     <h2>2. Map</h2>
     <p>Map tiles are downloaded from OpenFreeMap (OpenStreetMap data). The map area you are viewing and your
-       device's IP address reach that server. This is the only network traffic the App makes.</p>
+       device's IP address reach that server. When the direction tab gets its first fix it moves the map to your surroundings, so although no
+       coordinates are sent, the requested tiles (about a 1 km grid) and your IP can reveal your approximate area.
+       Downloaded tiles are cached on the device (they are not coordinates); withdrawing location consent clears this cache.
+       Apart from usage statistics (section 8), this is the only network traffic the App makes.</p>
 
     <h2>3. Microphone</h2>
     <p>Drone detection and the propeller check analyse microphone audio live. Audio is reduced to frequency
@@ -108,7 +133,8 @@
     <p>The camera preview is used only as the backdrop for the direction guide. No photo or video is stored or sent.</p>
 
     <h2>5. Bluetooth and Wi-Fi scanning</h2>
-    <p>The radio search tab receives Remote ID and device names that nearby devices broadcast on their own.
+    <p>The current version does not offer the radio search tab (it is not shown, and no Bluetooth or Wi-Fi scanning takes place). The following describes how it works if the tab is offered again; before that, this policy and the Location-Based Service Terms will be updated.
+       The radio search tab receives Remote ID and device names that nearby devices broadcast on their own.
        The App never connects to or transmits to any device, and what it receives is held in memory only
        while displayed; nothing is stored. Even when a Remote ID broadcast carries the operator's position, the App does not
        display it; it shows only the aircraft's position, identifier and speed. On iPhone only Bluetooth broadcasts are
@@ -119,22 +145,26 @@
        Everything is computed on the device and nothing is transmitted.</p>
 
     <h2>7. What is stored on the device</h2>
-    <p>Only your chosen language is stored locally. Measurements are not saved. Uninstalling the App removes the setting.</p>
+    <p>App settings such as your chosen language, your location-terms and usage-statistics choices, the location use record (no coordinates, 180 days) and the drone sound detection log are stored on the device.
+       The detection log contains <strong>no location (coordinates)</strong> — only times, durations, verdicts, frequencies and sound levels — and keeps up to the latest 500 entries until you delete them. When you tap Share, a detection-log CSV file (no location column) goes to the app you choose.
+       No other measurements or locations are saved, and uninstalling the App removes everything. If you use device backup (Android Google backup, iCloud and the like), app data may be included in that backup.</p>
 
     <h2>8. Advertising and usage statistics</h2>
     <p>The App shows no advertising and does not track you across other apps or websites. From version 1.1.0 it
-       uses Google Firebase Analytics to collect which tabs, measurements and settings are used, and device type,
-       OS, app language and country, to improve the App. No location, sound, received radio content, device names
-       or entered values are sent, and you are not identified. The advertising ID is not collected. Retention follows
+       uses Google Firebase Analytics to collect which tabs, measurements and settings are used, an app instance ID (a random identifier per install), device type,
+       OS, app version, app language, and approximate region derived from your IP (country/city level; the IP is not stored), to improve the App. No coordinates, place names, sound, received radio content, device names
+       or entered values are sent, and you are not identified by name or account. The advertising ID is not collected.
+       If your device's region or language settings point to Europe (EEA, UK, Switzerland), or the region cannot be determined, the App does not start Firebase and sends no statistics until you choose "Allow" in the "Usage statistics" prompt; if you decline, nothing is sent (legal basis: consent).
+       Elsewhere statistics are collected on the basis of our legitimate interest in improving the App. In every region you can turn them off or on at any time with "Send usage statistics" in the Support sheet. Retention follows
        Google Analytics defaults (up to 14 months).
        See <a href="https://policies.google.com/technologies/partner-sites">Google's data practices</a>.</p>
 
     <h2>9. Children</h2>
-    <p>The App is not directed at children under 13.</p>
+    <p>The App is not directed at children under 13 (under 14 in Korea).</p>
 
     <h2>10. Deletion and contact</h2>
     <p>FlyGuard collects no personal data and keeps nothing on a server, so there is no server-side data to delete.
-       Uninstalling the App removes the local setting. Questions: harvey7926@gmail.com — answered within 30 days.</p>
+       Withdrawing location consent removes the map cache and the location use record; uninstalling the App removes the local settings and the detection log, which you can also delete in the App. Questions: harvey7926@gmail.com — answered within 30 days.</p>
     <p class="muted">Contact: harvey7926@gmail.com</p>
   </div>
 </div>
